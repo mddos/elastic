@@ -457,7 +457,7 @@ func (s *UpdateByQueryService) buildURL() (string, url.Values, error) {
 		params.Set("pretty", "1")
 	}
 	if s.slices != nil {
-		params.Set("slices", fmt.Sprintf("%v", s.slices))
+		params.Set("slices", fmt.Sprintf("%v", *s.slices))
 	}
 	if len(s.xSource) > 0 {
 		params.Set("_source", strings.Join(s.xSource, ","))
